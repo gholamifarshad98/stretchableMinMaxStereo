@@ -2,6 +2,7 @@ from Kernel import Kernel
 
 class D2UKernel(Kernel):
     def stretch(self,numOfRowsImage , numOfColsImage, disparity, stretchThreshold, refImage):
+        self.name = "D2U"
         row = self.numOfRowsOfKernel-1
         while row>=0 :
             for column in range(self.numOfColumnOfKernel):
@@ -18,3 +19,5 @@ class D2UKernel(Kernel):
                 row = row + 1
                 if self.rowOfKernelInImage-self.anchorLocationRow<0:
                     break
+    def reporter(self):
+        return

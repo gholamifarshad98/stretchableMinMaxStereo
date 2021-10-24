@@ -2,6 +2,7 @@ from Kernel import Kernel
 
 class U2DKernel(Kernel):
     def stretch(self,numOfRowsImage , numOfColsImage, disparity,stretchThreshold, refImage):
+        self.name = "U2D"
         row = 0
         while row<self.numOfRowsOfKernel :
             for column in range(self.numOfColumnOfKernel):
@@ -17,3 +18,5 @@ class U2DKernel(Kernel):
                     self.numOfRowsOfKernel = self.numOfRowsOfKernel + 1
                 else:
                     break
+    def reporter(self):
+        return
